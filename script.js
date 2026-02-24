@@ -3,6 +3,8 @@ function firstNonRepeatedChar(str) {
 	let count = 0
 for(let i = 0 ; i < str.length ; i++){
 	let char = str[i]
+	console.log(char)
+	
 	for(let j = 0 ; j < str.length ; j++){
 		if(char === str[j]){
 			count++
@@ -11,10 +13,12 @@ for(let i = 0 ; i < str.length ; i++){
 
 	if(count === 1){
 		return char;
+	}else{
+		count = 0;
 	}
 }
 	return null;
 }
 
-const input = prompt("Enter a string");
-alert(firstNonRepeatedChar(input)); 
+// const input = prompt("Enter a string");
+// alert(firstNonRepeatedChar(input)); 
